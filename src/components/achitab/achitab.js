@@ -9,12 +9,10 @@ class AchiTab extends Component {
 
   componentDidMount () {
     sounds.achi.play()
-    setTimeout(this.clearAchiTab, 5000)
+    setTimeout(this.clearAchiTab, 7500)
   }
 
-  clearAchiTab = () => {
-    this.props.store.updateStore('currentAchievement', null)
-  }
+  clearAchiTab = () => this.props.store.updateStore('currentAchievement', null)
 
   render () {
     console.log('Displaying achi')

@@ -165,7 +165,7 @@ class Store {
   ]
 
   @observable resources = {
-    gold: 1000,
+    gold: 10000,
     wheat: 0,
     wood: 0,
     stone: 0,
