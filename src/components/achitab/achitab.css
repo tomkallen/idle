@@ -1,0 +1,27 @@
+.achitab {
+    position: fixed;
+    bottom: 1rem;
+    left: calc(50% - 15rem);
+    width: 30rem;
+    height: 6rem;
+    background-color: var(--brown);
+    border: 2px solid var(--golden);
+    box-shadow: 0 0 30px var(--golden);
+    font-size: 1.25rem;
+    color: var(--yellow);
+    text-align: center;
+}
+
+.achitab-text {
+    font-size: 1.25rem;
+    display: inline-block;
+    padding: .5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.achitab p {
+    margin-top: .5rem;
+    font-size: 1.75rem;
+    text-align: center;
+}

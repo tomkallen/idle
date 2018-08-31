@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './servicebar.css'
-import { observer } from 'mobx-react'
+import { observer, inject } from 'mobx-react'
 
+@inject('store')
 @observer
 class ServiceBar extends Component {
 

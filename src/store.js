@@ -1,13 +1,26 @@
-import { observable, action } from 'mobx'
+import { observable, computed, action } from 'mobx'
 import sounds from './audio'
+import { achievements } from './achievements'
 
 class Store {
 
   static updateInterval = 3 // sec
 
+  @observable achievementScore = 0
+  @observable currentAchievement = null
   @observable global = {
     era: 1,
     villagers: 0
+  }
+
+  @computed get maxCapacity () {
+    return {
+      wheat: this.services[1].capacity * this.services[1].level
+    }
+  }
+
+  updateStore (prop, value) {
+    this[prop] = value
   }
 
   @observable services = [
@@ -169,14 +182,25 @@ class Store {
   }
 
   @action tick () {
-    console.log(this.buildings)
     this.buildings.slice(0).forEach(b => {
       if (b.level) {
         this.resources[b.produces] += Math.floor(b.getSpeed() * Store.updateInterval)
       }
     })
+    this.achievementTracker()
     window.setTimeout(this.tick.bind(this), 3000)
   }
+
+  @action achievementTracker () {
+    achievements.forEach(a => {
+      if (!a.active && a.isQualified()) {
+        a.active = true
+        this.achievementScore += a.score
+        this.currentAchievement = a
+      }
+    })
+  }
+
 }
 
 const store = new Store()
@@ -194,3 +218,4 @@ function getSpeed () {
 function getCapacity () {
   return Math.round(this.level * this.capacity)
 }
+
