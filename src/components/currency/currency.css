@@ -1,0 +1,11 @@
+.currency {
+    display: inline-block;
+    color: #800;
+    font-size: .9rem;
+}
+
+.currency img {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: bottom;
+}

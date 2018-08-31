@@ -1,0 +1,19 @@
+.servicebar {
+    display: flex;
+    background-color: #451a0b;
+    color: #fff;
+    border: 2px solid darkgoldenrod;
+    margin-bottom: 1px;
+    position: relative;
+    user-select: none;
+    padding: .5rem;
+    width: 100%;
+}
+
+.servicebar-left {
+    width: 50%;
+}
+
+.servicebar-right {
+    width: 50%;
+}

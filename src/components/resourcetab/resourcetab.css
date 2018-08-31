@@ -1,0 +1,9 @@
+.resourcetab {
+    display: flex;
+    background-color: #451a0b;
+    padding: .25rem;
+    font-size: 1.25rem;
+    border: 2px solid darkgoldenrod;
+    height: 4rem;
+    align-items: center;
+}
