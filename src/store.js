@@ -1,12 +1,73 @@
 import { observable, action } from 'mobx'
+import sounds from './audio'
 
 class Store {
 
   static updateInterval = 3 // sec
 
   @observable global = {
-    era: 1
+    era: 1,
+    villagers: 0
   }
+
+  @observable services = [
+    {
+      index: 0,
+      name: 'Peasant Hut',
+      description: 'This is a very basic hut for you common folk. It is not that spacey.',
+      price: 150,
+      currency: 'gold',
+      priceModifier: 1.08,
+      level: 1,
+      maxLevel: 5,
+      capacity: 3,
+      type: 'peasants',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    },
+    {
+      index: 1,
+      name: 'Barn',
+      description: 'This is where your wheat is stored',
+      price: 100,
+      currency: 'gold',
+      priceModifier: 1.08,
+      level: 1,
+      maxLevel: 30,
+      capacity: 500,
+      type: 'wheat',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    },
+    {
+      index: 2,
+      name: 'Warehouse',
+      description: 'Used to store the stone blocks',
+      price: 200,
+      currency: 'gold',
+      priceModifier: 1.1,
+      level: 1,
+      maxLevel: 20,
+      capacity: 300,
+      type: 'stone',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    },
+    {
+      index: 3,
+      name: 'Stables',
+      description: 'Where your horses live',
+      price: 1000,
+      currency: 'gold',
+      priceModifier: 1.1,
+      level: 1,
+      maxLevel: 10,
+      capacity: 20,
+      type: 'horses',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    }
+  ]
 
   @observable  buildings = [
     {
@@ -103,6 +164,7 @@ class Store {
     if (building && this.resources.gold > building.getPrice()) {
       this.resources.gold -= building.getPrice()
       building.level += 1
+      sounds.click.play()
     }
   }
 
@@ -127,4 +189,8 @@ function getPrice () {
 
 function getSpeed () {
   return Number((this.speed * 5).toFixed(2)) * this.level
+}
+
+function getCapacity () {
+  return Math.round(this.level * this.capacity)
 }

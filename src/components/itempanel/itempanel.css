@@ -1,6 +1,6 @@
 .itempanel {
     display: inline-block;
     width: 26rem;
-    background-color: darkslategrey;
     border: .5rem solid #451a0b;
+    box-shadow: 0 0 2px #000;
 }

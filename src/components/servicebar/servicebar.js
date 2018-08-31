@@ -6,14 +6,18 @@ import { observer } from 'mobx-react'
 class ServiceBar extends Component {
 
   render () {
+    const {level, name, description, capacity, type, maxLevel, currency} = this.props.service
 
     return <div className={'servicebar'}>
       <div className={'servicebar-left'}>
-        <h3>Service Title</h3>
-        <h5>Description of what it does</h5>
-        <p>Some footnotes</p>
+        <h3>{name}</h3>
+        <h5>{description}</h5>
       </div>
-      <div className={'servicebar-right'}>Here goes incomes and expenditures</div>
+      <div className={'servicebar-right'}>
+        <p>capacity: <span>{capacity} {type} </span>/ level</p>
+        <p>level: <span>{level} / {maxLevel}</span></p>
+        <p>price: <span>{this.props.service.getPrice()} {currency}</span></p>
+      </div>
     </div>
   }
 }

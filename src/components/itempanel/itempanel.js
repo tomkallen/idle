@@ -4,6 +4,7 @@ import './itempanel.css'
 import { observer } from 'mobx-react'
 import Tab from '../tab/tab'
 import ResourceTab from '../resourcetab/resourcetab'
+import PanelHeader from "../panelheader/panelheader"
 import { Scrollbars } from 'react-custom-scrollbars'
 
 @observer
@@ -20,6 +21,7 @@ class ItemPanel extends Component {
   render () {
 
     return <div className={'itempanel'}>
+      <PanelHeader>Buildings</PanelHeader>
       <Tab active>I</Tab>
       <Tab>II</Tab>
       <Tab>III</Tab>

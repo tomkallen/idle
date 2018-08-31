@@ -1,13 +1,18 @@
 .servicebar {
     display: flex;
-    background-color: #451a0b;
+    background-color: var(--brown);
     color: #fff;
-    border: 2px solid darkgoldenrod;
+    border: 2px solid var(--golden);
     margin-bottom: 1px;
     position: relative;
     user-select: none;
     padding: .5rem;
     width: 100%;
+    min-height: 6rem;
+}
+
+.servicebar span {
+    color: var(--red);
 }
 
 .servicebar-left {
@@ -16,4 +21,5 @@
 
 .servicebar-right {
     width: 50%;
+    font-size: .85rem;
 }
