@@ -3,16 +3,17 @@
     width: 3rem;
     height: 3rem;
     text-align: center;
-    background: #00630b;
+    background: var(--green);
     font-size: 1rem;
     line-height: 3rem;
-    border-left: 1px solid goldenrod;
+    border-left: 1px solid var(--golden);
     user-select: none;
 }
 
 .itemicon.disabled {
-    background-color: #511908;
+    background-color: var(--brown);
 }
+
 .itemicon.disabled:hover {
     background-color: inherit;
     color: inherit;
@@ -21,8 +22,9 @@
 .itemicon svg {
     vertical-align: middle;
 }
+
 .itemicon:hover {
     background-color: goldenrod;
     transition: all .2s linear;
-    color: #00630b;
+    color: #000;
 }

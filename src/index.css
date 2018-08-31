@@ -3,6 +3,7 @@
     --brown: #451a0b;
     --red: #ff4108;
     --yellow: #fdff88;
+    --green: #00630b;
 }
 
 
@@ -13,15 +14,24 @@
     text-shadow: 1px 1px 0 #333;
     margin: 0;
     padding: 0;
+    cursor: url("./resources/cursor.png"), auto;
 }
 
 body {
     background-color: var(--brown);
-    cursor: url("./resources/cursor.png"), auto;
+}
+
+.top {
+    background: url("./resources/sky.png");
+    background-size: cover;
+    width: 100%;
+    height: 16rem;
 }
 
 .main {
+
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     max-width: 52rem;
 }

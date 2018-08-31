@@ -27,7 +27,7 @@ class Store {
     {
       index: 0,
       name: 'Peasant Hut',
-      description: 'This is a very basic hut for you common folk. It is not that spacey.',
+      description: 'This is a very basic hut for your common folk. It is not that spacey.',
       price: 150,
       currency: 'gold',
       priceModifier: 1.08,
@@ -35,6 +35,7 @@ class Store {
       maxLevel: 5,
       capacity: 3,
       type: 'peasants',
+      tab: 'housing',
       getPrice: getPrice,
       getCapacity: getCapacity
     },
@@ -49,6 +50,7 @@ class Store {
       maxLevel: 30,
       capacity: 500,
       type: 'wheat',
+      tab: 'store',
       getPrice: getPrice,
       getCapacity: getCapacity
     },
@@ -63,6 +65,7 @@ class Store {
       maxLevel: 20,
       capacity: 300,
       type: 'stone',
+      tab: 'store',
       getPrice: getPrice,
       getCapacity: getCapacity
     },
@@ -77,6 +80,7 @@ class Store {
       maxLevel: 10,
       capacity: 20,
       type: 'horses',
+      tab: 'store',
       getPrice: getPrice,
       getCapacity: getCapacity
     }

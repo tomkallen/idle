@@ -7,7 +7,7 @@ class ItemIcon extends Component {
       <div
         onClick={this.props.handleClick}
         className={this.props.enabled ?'itemicon': 'itemicon disabled'}>
-        {this.props.enabled ? "BUY" :"X"}
+        {this.props.enabled ? "Buy" :"X"}
       </div>
     )
   }

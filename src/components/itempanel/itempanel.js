@@ -3,7 +3,6 @@ import ItemBar from '../itembar/itembar'
 import './itempanel.css'
 import { observer } from 'mobx-react'
 import Tab from '../tab/tab'
-import ResourceTab from '../resourcetab/resourcetab'
 import PanelHeader from "../panelheader/panelheader"
 import { Scrollbars } from 'react-custom-scrollbars'
 
@@ -27,7 +26,6 @@ class ItemPanel extends Component {
       <Tab>III</Tab>
       <Tab>IV</Tab>
       <Scrollbars style={{width: '100%', height: 300}}>{this.renderBars()}</Scrollbars>
-      <ResourceTab/>
     </div>
   }
 }

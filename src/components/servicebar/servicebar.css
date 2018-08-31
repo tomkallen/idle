@@ -1,5 +1,6 @@
 .servicebar {
     display: flex;
+    flex-wrap: wrap;
     background-color: var(--brown);
     color: #fff;
     border: 2px solid var(--golden);
@@ -8,7 +9,11 @@
     user-select: none;
     padding: .5rem;
     width: 100%;
-    min-height: 6rem;
+    min-height: 6.5rem;
+}
+
+.servicebar h3, .servicebar h5 {
+    font-weight: normal;
 }
 
 .servicebar span {
@@ -16,10 +21,29 @@
 }
 
 .servicebar-left {
-    width: 50%;
+    flex: 1 0 50%;
 }
 
 .servicebar-right {
-    width: 50%;
+    flex: 1 0 50%;
     font-size: .85rem;
+}
+
+.servicebar-bottom {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.servicebar-bottom button {
+    appearance: none;
+    border: 0;
+    background: #00630b;
+    padding: .25rem .5rem;
+}
+
+.servicebar-bottom button:hover {
+    background-color: goldenrod;
+    transition: all .2s linear;
+    color: #000;
 }

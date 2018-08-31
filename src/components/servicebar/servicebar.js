@@ -8,6 +8,8 @@ class ServiceBar extends Component {
 
   render () {
     const {level, name, description, capacity, type, maxLevel, currency} = this.props.service
+    const price = this.props.service.getPrice()
+    const enabled = price <= this.props.store.resources.gold
 
     return <div className={'servicebar'}>
       <div className={'servicebar-left'}>
@@ -17,7 +19,10 @@ class ServiceBar extends Component {
       <div className={'servicebar-right'}>
         <p>capacity: <span>{capacity} {type} </span>/ level</p>
         <p>level: <span>{level} / {maxLevel}</span></p>
-        <p>price: <span>{this.props.service.getPrice()} {currency}</span></p>
+        <p>price: <span>{price} {currency}</span></p>
+      </div>
+      <div className={'servicebar-bottom'}>
+        {enabled && <button>Upgrade</button>}
       </div>
     </div>
   }

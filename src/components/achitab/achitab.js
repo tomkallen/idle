@@ -15,12 +15,12 @@ class AchiTab extends Component {
   clearAchiTab = () => this.props.store.updateStore('currentAchievement', null)
 
   render () {
-    console.log('Displaying achi')
     return <div
       onClick={() => this.clearAchiTab()}
       className={'achitab'}>
       <p>{this.props.store.currentAchievement.name}</p>
-      <div className={'achitab-text'}>{this.props.store.currentAchievement.info}
+      <div className={'achitab-text'}>
+        {this.props.store.currentAchievement.info}
       </div>
     </div>
   }

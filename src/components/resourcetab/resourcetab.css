@@ -1,4 +1,5 @@
 .resourcetab {
+    flex: 1 0 100%;
     display: flex;
     background-color: #451a0b;
     padding: .25rem;

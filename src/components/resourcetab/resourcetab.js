@@ -10,6 +10,7 @@ class ResourceTab extends Component {
   render () {
     const resources = Object.keys(this.props.store.resources).map(r =>
       <ItemPrice
+        key={r}
         price={this.props.store.resources[r]}
         currency={r}
       />)
