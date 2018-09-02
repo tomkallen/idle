@@ -6,7 +6,7 @@
     background: var(--green);
     font-size: 1rem;
     line-height: 3rem;
-    border-left: 1px solid var(--golden);
+    border-left: 2px ridge var(--golden);
     user-select: none;
 }
 

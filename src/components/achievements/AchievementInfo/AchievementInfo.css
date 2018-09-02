@@ -2,5 +2,5 @@
 
     height:  3rem;
     background-color: var(--brown);
-    border: 1px solid var(--golden);
+    border: 2px ridge var(--golden);
 }

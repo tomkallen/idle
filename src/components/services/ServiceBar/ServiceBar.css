@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     background-color: var(--brown);
     color: #fff;
-    border: 2px solid var(--golden);
+    border: 2px ridge var(--golden);
     margin-bottom: 1px;
     position: relative;
     user-select: none;
@@ -37,11 +37,11 @@
 
 .servicebar-bottom button {
     appearance: none;
-    border: 0;
+    border: 2px ridge var(--golden);
     background: #00630b;
     padding: .25rem .5rem;
-    border-radius: 4px;
     outline: none;
+
 }
 
 .servicebar-bottom button:hover {

@@ -3,6 +3,7 @@
     font-size: 1.25rem;
     line-height: 2.25rem;
     background-color: var(--golden);
+    border: 2px ridge var(--golden);
     margin: 0;
     height: 2.5rem;
 }

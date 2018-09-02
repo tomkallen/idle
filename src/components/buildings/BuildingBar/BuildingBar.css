@@ -2,7 +2,7 @@
     display: flex;
     background-color: var(--brown);
     color: #fff;
-    border: 2px solid var(--golden);
+    border: 2px ridge var(--golden);
     margin-bottom: 1px;
     position: relative;
     user-select: none;

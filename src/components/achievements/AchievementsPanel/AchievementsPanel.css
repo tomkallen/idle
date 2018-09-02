@@ -13,10 +13,11 @@
     align-self: center;
     width: 50rem;
     margin: auto;
-    height:75%;
+    height: 40rem;
     background-color: #200f08;
-    border: 2px solid var(--golden);
+    border: 4px ridge var(--golden);
 }
+
 .AchievementsPanel .body {
     display: flex;
     height: calc(100% - 5.5rem);
@@ -26,12 +27,12 @@
     display: block;
     width: 25%;
     background-color: #200f08;
-    border: 1px solid var(--golden);
+    border: 2px ridge var(--golden);
 }
 
 .AchievementsPanel .body .list {
     display: block;
     width: 75%;
     background-color: #200f08;
-    border: 1px solid var(--golden);
+    border: 2px ridge var(--golden);
 }

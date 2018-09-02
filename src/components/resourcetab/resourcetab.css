@@ -1,10 +1,10 @@
 .resourcetab {
     flex: 1 0 100%;
     display: flex;
-    background-color: #451a0b;
+    background-color: var(--brown);
     padding: .25rem;
     font-size: 1.25rem;
-    border: 2px solid darkgoldenrod;
+    border: 2px ridge var(--golden);
     height: 4rem;
     align-items: center;
 }
