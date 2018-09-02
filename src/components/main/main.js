@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import ItemPanel from '../itempanel/itempanel'
+import BuildingPanel from '../buildings/BuildingPanel/BuildingPanel'
 import ResourceTab from '../resourcetab/resourcetab'
-import ServicePanel from '../servicepanel/servicepanel'
+import ServicePanel from '../services/ServicePanel/ServicePanel'
 import { observer, inject } from 'mobx-react'
-import AchiTab from '../achitab/achitab'
+import AchiTab from '../achievements/achitab/achitab'
 import store from '../../store'
 
 @inject('store')
@@ -18,7 +18,7 @@ export default class Main extends Component {
       <div className={'main'}>
         <ResourceTab/>
 
-        <ItemPanel
+        <BuildingPanel
           resources={this.props.store.resources}
           buildings={this.props.store.buildings}
         />

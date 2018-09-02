@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './achitab.css'
-import sounds from '../../audio'
+import sounds from '../../../audio'
 
 @inject('store')
 @observer
 class AchiTab extends Component {
+  timeout = null
 
   componentDidMount () {
+    console.log(sounds)
+    sounds.achi.playing && sounds.achi.stop()
     sounds.achi.play()
-    setTimeout(this.clearAchiTab, 7500)
+    clearInterval(this.timeout)
+    this.timeout = setTimeout(this.clearAchiTab, 8000)
+
   }
 
   clearAchiTab = () => this.props.store.updateStore('currentAchievement', null)
@@ -22,6 +27,7 @@ class AchiTab extends Component {
       <div className={'achitab-text'}>
         {this.props.store.currentAchievement.info}
       </div>
+      <span className={'achilabel'}>{this.props.store.currentAchievement.score}</span>
     </div>
   }
 }

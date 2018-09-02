@@ -1,0 +1,7 @@
+.itempanel {
+    width: 26rem;
+    border: 2px solid var(--golden);
+    padding: .5rem;
+    box-shadow: 0 0 2px #000;
+}
+

@@ -35,3 +35,7 @@ body {
     margin: 0 auto;
     max-width: 52rem;
 }
+
+.tab-holder {
+    display: flex;
+}

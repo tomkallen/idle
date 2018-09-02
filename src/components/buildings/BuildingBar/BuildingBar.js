@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './itembar.css'
-import ItemPrice from '../itemprice/itemprice'
-import ItemIcon from '../itemicon/itemicon'
-import ItemTitle from '../itemtitle/itemtitle'
+import './BuildingBar.css'
+import BuildingPrice from '../BuildingPrice/BuildingPrice'
+import BuildingBuyButton from '../BuildingBuyButton/BuildingBuyButton'
+import BuildingTitle from '../BuildingTitle/BuildingTitle'
 import { observer, inject } from 'mobx-react'
-import store from '../../store'
+import store from '../../../store'
 
 @inject('store')
 @observer
-class ItemBar extends Component {
+class BuildingBar extends Component {
 
   levelUp = () => this.props.store.levelUp(this.props.building.index)
 
@@ -21,18 +21,18 @@ class ItemBar extends Component {
       <div className={'itembar'}>
         <div className={'itembar-body'}>
           <div className="itembar-header">
-            <ItemTitle title={building.name} level={building.level}/>
+            <BuildingTitle title={building.name} level={building.level}/>
           </div>
           <div className="itembar-body-footer">
             <div className={'itembar-body-footer-produces'}>+{building.getSpeed()} {building.produces} / sec</div>
-            <ItemPrice currency={building.currency} price={price}/>
+            <BuildingPrice currency={building.currency} price={price}/>
           </div>
         </div>
-        <ItemIcon  enabled={enabled} handleClick={this.levelUp}/>
+        <BuildingBuyButton enabled={enabled} handleClick={this.levelUp}/>
 
       </div>)
   }
 }
 
-export default ItemBar
+export default BuildingBar
 

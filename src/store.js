@@ -181,7 +181,7 @@ class Store {
     if (building && this.resources.gold > building.getPrice()) {
       this.resources.gold -= building.getPrice()
       building.level += 1
-      sounds.click.play()
+      // sounds.click.stop().play()
     }
   }
 

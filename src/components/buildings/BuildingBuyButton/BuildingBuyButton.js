@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './itemicon.css'
+import './BuildingBuyButton.css'
 
-class ItemIcon extends Component {
+class BuildingBuyButton extends Component {
   render () {
     return (
       <div
@@ -13,5 +13,5 @@ class ItemIcon extends Component {
   }
 }
 
-export default ItemIcon
+export default BuildingBuyButton
 

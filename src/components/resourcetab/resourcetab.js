@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './resourcetab.css'
 import { observer, inject } from 'mobx-react'
-import ItemPrice from '../itemprice/itemprice'
+import BuildingPrice from '../buildings/BuildingPrice/BuildingPrice'
 import store from '../../store'
 
 @inject('store')
@@ -9,7 +9,7 @@ import store from '../../store'
 class ResourceTab extends Component {
   render () {
     const resources = Object.keys(this.props.store.resources).map(r =>
-      <ItemPrice
+      <BuildingPrice
         key={r}
         price={this.props.store.resources[r]}
         currency={r}

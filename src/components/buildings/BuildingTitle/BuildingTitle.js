@@ -1,12 +1,12 @@
 import React from 'react'
-import './itemtitle.css'
+import './BuildingTitle.css'
 
 
-const ItemTitle = ({title, level}) =>
+const BuildingTitle = ({title, level}) =>
   <div className={'itemtitle'}>
     {title}
     {level ? <span>{`level ${level}`}</span>: null}
   </div>
 
-export default ItemTitle
+export default BuildingTitle
 

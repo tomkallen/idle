@@ -40,10 +40,17 @@
     border: 0;
     background: #00630b;
     padding: .25rem .5rem;
+    border-radius: 4px;
+    outline: none;
 }
 
 .servicebar-bottom button:hover {
     background-color: goldenrod;
     transition: all .2s linear;
+    color: #000;
+}
+
+.servicebar-bottom button:active {
+    background-color: #fff;
     color: #000;
 }

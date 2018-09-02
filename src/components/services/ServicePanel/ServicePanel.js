@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './servicepanel.css'
+import './ServicePanel.css'
 import { observer, inject } from 'mobx-react'
-import PanelHeader from '../panelheader/panelheader'
-import Tab from '../tab/tab'
-import ServiceBar from '../servicebar/servicebar'
+import PanelHeader from '../../main/panelheader/panelheader'
+import Tab from '../../main/tab/tab'
+import ServiceBar from '../ServiceBar/ServiceBar'
 import { Scrollbars } from 'react-custom-scrollbars'
-import store from '../../store'
+import store from '../../../store'
 
 @inject('store')
 @observer
@@ -26,15 +26,17 @@ class ServicePanel extends Component {
 
     return <div className={'itempanel'}>
       <PanelHeader>Services</PanelHeader>
-      <Tab
-        onClick={() => this.setState({filter: 'store'})}
-        active={this.state.filter === 'store'}
-      >Store</Tab>
-      <Tab
-        onClick={() => this.setState({filter: 'housing'})}
-        active={this.state.filter === 'housing'}
-      >Housing</Tab>
-      <Scrollbars style={{width: '100%', height: 300}}>
+      <div className={'tab-holder'}>
+        <Tab
+          onClick={() => this.setState({filter: 'store'})}
+          active={this.state.filter === 'store'}
+        >Store</Tab>
+        <Tab
+          onClick={() => this.setState({filter: 'housing'})}
+          active={this.state.filter === 'housing'}
+        >Housing</Tab>
+      </div>
+      <Scrollbars style={{width: '100%', maxHeight: '300px', border: '1px solid var(--golden)'}}>
         {this.renderBars()}
       </Scrollbars>
     </div>
