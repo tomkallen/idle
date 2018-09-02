@@ -1,0 +1,14 @@
+.AchievementItem {
+    position: relative;
+    background-color: var(--brown);
+    border: 1px solid var(--golden);
+}
+
+.AchievementItem .inactive {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .5);
+}

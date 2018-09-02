@@ -1,0 +1,37 @@
+.AchievementsPanel {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.AchievementsPanel .wrapper {
+    align-self: center;
+    width: 50rem;
+    margin: auto;
+    height:75%;
+    background-color: #200f08;
+    border: 2px solid var(--golden);
+}
+.AchievementsPanel .body {
+    display: flex;
+    height: calc(100% - 5.5rem);
+}
+
+.AchievementsPanel .body .categories {
+    display: block;
+    width: 25%;
+    background-color: #200f08;
+    border: 1px solid var(--golden);
+}
+
+.AchievementsPanel .body .list {
+    display: block;
+    width: 75%;
+    background-color: #200f08;
+    border: 1px solid var(--golden);
+}

@@ -1,0 +1,6 @@
+.AchievementInfo {
+
+    height:  3rem;
+    background-color: var(--brown);
+    border: 1px solid var(--golden);
+}

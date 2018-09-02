@@ -1,0 +1,15 @@
+.AchievementCategory {
+    background-color: var(--brown);
+    border-bottom: 1px solid var(--golden);
+    height: 2rem;
+    padding-left: 1rem;
+    line-height: 2rem;
+    color: var(--yellow);
+    text-transform: capitalize;
+}
+
+.AchievementCategory:hover {
+    background: var(--golden);
+    color: var(--yellow);
+    border-bottom: 1px solid var(--brown);
+}

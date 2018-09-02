@@ -1,11 +1,12 @@
-import { Howl } from 'howler'
-
 const click = require('./resources/click_01.wav')
 const achi = require('./resources/achi.mp3')
 
-export default {
-  click: new Howl({src: [click]}),
-  achi: new Howl({src: [achi]})
-}
+const sounds = {}
 
+sounds.click = document.createElement('audio')
+sounds.click.src = click
 
+sounds.achi = document.createElement('audio')
+sounds.achi.src = achi
+
+export default sounds

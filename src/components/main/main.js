@@ -5,6 +5,7 @@ import ServicePanel from '../services/ServicePanel/ServicePanel'
 import { observer, inject } from 'mobx-react'
 import AchiTab from '../achievements/achitab/achitab'
 import store from '../../store'
+import AchievementsPanel from "../achievements/AchievementsPanel/AchievementsPanel"
 
 @inject('store')
 @observer
@@ -16,6 +17,7 @@ export default class Main extends Component {
   render () {
     return (
       <div className={'main'}>
+        {/*<AchievementsPanel/>*/}
         <ResourceTab/>
 
         <BuildingPanel
