@@ -6,8 +6,9 @@
     background: var(--green);
     font-size: 1rem;
     line-height: 3rem;
-    border-left: 2px ridge var(--golden);
+    border: 2px ridge var(--golden);
     user-select: none;
+    outline: none;
 }
 
 .itemicon.disabled {
@@ -26,5 +27,10 @@
 .itemicon:hover {
     background-color: goldenrod;
     transition: all .2s linear;
+    color: #000;
+}
+
+.itemicon:active {
+    background-color: #fff;
     color: #000;
 }

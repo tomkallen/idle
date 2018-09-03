@@ -1,0 +1,15 @@
+.ControlButton {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--brown);
+    border: 2px ridge var(--golden);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ControlButton:hover {
+    background-color: var(--green);
+    color: #fff;
+}

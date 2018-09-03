@@ -13,6 +13,8 @@ class Store {
     villagers: 0
   }
 
+  @observable display
+
   @computed get maxCapacity () {
     return {
       wheat: this.services[1].capacity * this.services[1].level
@@ -203,6 +205,10 @@ class Store {
         this.currentAchievement = a
       }
     })
+  }
+
+  @action displayModal (modal) {
+    this.display = modal
   }
 
 }
