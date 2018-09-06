@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import "./AchievementInfo.css"
+import React from 'react'
+import './AchievementInfo.css'
 
-export default class AchievementInfo extends Component {
-  render () {
-    return <div className={"AchievementInfo"}>here goes achi info</div>
-  }
-}
+const AchievementInfo = ({current, max}) =>
+  <div className={'AchievementInfo'}>{current}/{max} achievement points earned</div>
+
+export default AchievementInfo

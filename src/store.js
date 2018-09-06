@@ -6,6 +6,7 @@ class Store {
 
   static updateInterval = 3 // sec
 
+  @observable achievements = achievements
   @observable achievementScore = 0
   @observable currentAchievement = null
   @observable global = {
@@ -34,7 +35,7 @@ class Store {
       currency: 'gold',
       priceModifier: 1.08,
       level: 1,
-      maxLevel: 5,
+      maxLevel: 25,
       capacity: 3,
       type: 'peasants',
       tab: 'housing',
@@ -157,7 +158,7 @@ class Store {
     },
     {
       index: 5,
-      name: 'Stables',
+      name: 'Horse Farm',
       produces: 'horses',
       speed: 0.1,
       price: 370,
@@ -171,7 +172,7 @@ class Store {
   ]
 
   @observable resources = {
-    gold: 10000,
+    gold: 100000,
     wheat: 0,
     wood: 0,
     stone: 0,
@@ -180,9 +181,18 @@ class Store {
 
   @action levelUp (id) {
     const building = this.buildings.find(item => item.index === id)
-    if (building && this.resources.gold > building.getPrice()) {
+    if (building && this.resources.gold >= building.getPrice()) {
       this.resources.gold -= building.getPrice()
       building.level += 1
+      sounds.click.play()
+    }
+  }
+
+  @action upgrade (id) {
+    const service = this.services.find(service => service.index === id)
+    if (service && service.level < service.maxLevel && this.resources.gold >= service.getPrice()) {
+      this.resources.gold -= service.getPrice()
+      service.level += 1
       sounds.click.play()
     }
   }
@@ -191,6 +201,8 @@ class Store {
     this.buildings.slice(0).forEach(b => {
       if (b.level) {
         this.resources[b.produces] += Math.floor(b.getSpeed() * Store.updateInterval)
+        const capacity = this.services.find(service => service.type === b.produces).getCapacity()
+        if (this.resources[b.produces] > capacity) this.resources[b.produces] = capacity
       }
     })
     this.achievementTracker()
@@ -198,7 +210,7 @@ class Store {
   }
 
   @action achievementTracker () {
-    achievements.forEach(a => {
+    this.achievements.forEach(a => {
       if (!a.active && a.isQualified()) {
         a.active = true
         this.achievementScore += a.score

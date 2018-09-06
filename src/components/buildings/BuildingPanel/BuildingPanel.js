@@ -20,7 +20,7 @@ class BuildingPanel extends Component {
   render () {
 
     return <div className={'itempanel'}>
-      <PanelHeader>Buildings</PanelHeader>
+      <PanelHeader>Production</PanelHeader>
       <div className="tab-holder">
         <Tab active>I</Tab>
         <Tab disabled>II</Tab>

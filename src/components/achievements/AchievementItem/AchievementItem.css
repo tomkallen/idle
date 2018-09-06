@@ -22,6 +22,11 @@ text-align: center;
     border: 2px ridge var(--golden);
 }
 
+.AchievementItem .name.disabled {
+    color: var(--brown);
+    background-color: grey;
+}
+
 .AchievementItem .info {
     padding: .5rem 1rem;
     text-align: center;

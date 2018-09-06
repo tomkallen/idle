@@ -25,7 +25,7 @@ class ServicePanel extends Component {
   render () {
 
     return <div className={'itempanel'}>
-      <PanelHeader>Services</PanelHeader>
+      <PanelHeader>Storage</PanelHeader>
       <div className={'tab-holder'}>
         <Tab
           onClick={() => this.setState({filter: 'store'})}
