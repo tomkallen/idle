@@ -1,5 +1,5 @@
 .resourcetab {
-    flex: 1 0 100%;
+    flex-direction: row;
     display: flex;
     background-color: var(--brown);
     padding: .25rem;
@@ -7,4 +7,14 @@
     border: 2px ridge var(--golden);
     height: 4rem;
     align-items: center;
+    width: 100%;
+}
+
+.resource {
+    display: inline-block;
+    padding: 0 .5rem;
+}
+.resource-numbers {
+    display: inline-block;
+    padding: 0 .25rem;
 }

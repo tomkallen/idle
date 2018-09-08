@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './AchievementsPanel.css'
+import { achievements } from '../../../achievements'
 import PanelHeader from '../../main/panelheader/panelheader'
 import AchievementInfo from '../AchievementInfo/AchievementInfo'
 import AchievementCategory from '../AchievementCategory/AchievementCategory'
 import AchievementItem from '../AchievementItem/AchievementItem'
+import { Scrollbars } from 'react-custom-scrollbars'
 import store from '../../../store'
 
 @inject('store')
@@ -20,6 +22,7 @@ export default class AchievementsPanel extends Component {
   renderList = () => {
     return this.props.store.achievements
       .filter(achievement => achievement.category === this.state.category)
+      .sort((a, b) => b.active - a.active)
       .map(achievement => <AchievementItem achievement={achievement}/>)
   }
 
@@ -34,7 +37,10 @@ export default class AchievementsPanel extends Component {
         <AchievementInfo current={this.currentScore()} max={this.maxScore()}/>
         <div className={'body'}>
           <div className={'categories'}>{this.renderCategories()}</div>
-          <div className={'list'}>{this.renderList()}</div>
+          <div className={'list'}>
+            <Scrollbars style={{width: '100%', maxHeight: '35rem'}}>
+              {this.renderList()}</Scrollbars>
+          </div>
         </div>
       </div>
     </div>

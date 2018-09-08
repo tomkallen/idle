@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './BuildingBar.css'
-import BuildingPrice from '../BuildingPrice/BuildingPrice'
-import BuildingBuyButton from '../BuildingBuyButton/BuildingBuyButton'
-import BuildingTitle from '../BuildingTitle/BuildingTitle'
+import Currency from '../../common/currency/currency'
 import { observer, inject } from 'mobx-react'
 import store from '../../../store'
 
@@ -15,21 +13,27 @@ class BuildingBar extends Component {
   render () {
     let {building, resources} = this.props
     const price = building.getPrice()
-    const enabled  = price <= resources.gold
+    const enabled = price <= resources.gold
 
     return (
       <div className={'itembar'}>
         <div className={'itembar-body'}>
           <div className="itembar-header">
-            <BuildingTitle title={building.name} level={building.level}/>
+            <div className={'itembar-title'}>
+              <span>{building.name}</span>
+              {building.level ? <span className={'itembar-level'}>x {building.level}</span> : null}
+            </div>
           </div>
           <div className="itembar-body-footer">
             <div className={'itembar-body-footer-produces'}>+{building.getSpeed()} {building.produces} / sec</div>
-            <BuildingPrice currency={building.currency} price={price}/>
           </div>
         </div>
-        <BuildingBuyButton enabled={enabled} handleClick={this.levelUp}/>
-
+        <button
+          onClick={() => enabled && this.levelUp()}
+          className={enabled ? 'buy-button' : 'buy-button disabled'}>
+          <Currency currency={building.currency}/>
+          {price}
+        </button>
       </div>)
   }
 }

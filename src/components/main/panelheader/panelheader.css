@@ -4,9 +4,10 @@
     font-size: 1.25rem;
     line-height: 2.25rem;
     background-color: var(--golden);
-    border: 2px ridge var(--golden);
+    border: var(--border);
     margin: 0;
     height: 2.5rem;
+    letter-spacing: 4px;
 }
 
 .panelheader span {

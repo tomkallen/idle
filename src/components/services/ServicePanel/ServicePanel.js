@@ -15,6 +15,7 @@ class ServicePanel extends Component {
   renderBars = () =>
     this.props.store.services
       .filter(service => service.tab === this.state.filter)
+      .sort((a, b) => a.price - b.price)
       .map(service =>
         <ServiceBar
           key={service.index}

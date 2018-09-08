@@ -57,6 +57,7 @@ class Store {
       getPrice: getPrice,
       getCapacity: getCapacity
     },
+
     {
       index: 2,
       name: 'Warehouse',
@@ -65,7 +66,7 @@ class Store {
       currency: 'gold',
       priceModifier: 1.1,
       level: 1,
-      maxLevel: 20,
+      maxLevel: 30,
       capacity: 300,
       type: 'stone',
       tab: 'store',
@@ -80,9 +81,39 @@ class Store {
       currency: 'gold',
       priceModifier: 1.1,
       level: 1,
-      maxLevel: 10,
-      capacity: 20,
+      maxLevel: 30,
+      capacity: 25,
       type: 'horses',
+      tab: 'store',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    },
+    {
+      index: 4,
+      name: 'Cow Shed',
+      description: 'A place for your cattle',
+      price: 165,
+      currency: 'gold',
+      priceModifier: 1.08,
+      level: 1,
+      maxLevel: 30,
+      capacity: 30,
+      type: 'cattle',
+      tab: 'store',
+      getPrice: getPrice,
+      getCapacity: getCapacity
+    },
+    {
+      index: 5,
+      name: 'Craft Store',
+      description: 'Keep hides here',
+      price: 195,
+      currency: 'gold',
+      priceModifier: 1.08,
+      level: 1,
+      maxLevel: 30,
+      capacity: 60,
+      type: 'leather',
       tab: 'store',
       getPrice: getPrice,
       getCapacity: getCapacity
@@ -108,7 +139,7 @@ class Store {
       index: 1,
       name: 'Woodcutter Cabin',
       produces: 'wood',
-      speed: .9,
+      speed: 0.9,
       price: 75,
       currency: 'gold',
       priceModifier: 1.09,
@@ -176,6 +207,8 @@ class Store {
     wheat: 0,
     wood: 0,
     stone: 0,
+    cattle: 0,
+    leather: 0,
     horses: 0
   }
 
