@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './BuildingBar.css'
-import Currency from '../../common/currency/currency'
+import Currency from '../../common/Currency/Currency'
 import { observer, inject } from 'mobx-react'
 import store from '../../../store'
 
@@ -20,7 +20,7 @@ class BuildingBar extends Component {
         <div className={'itembar-body'}>
           <div className="itembar-header">
             <div className={'itembar-title'}>
-              <span>{building.name}</span>
+              <span className={'itembar-title-name'}>{building.name}</span>
               {building.level ? <span className={'itembar-level'}>x {building.level}</span> : null}
             </div>
           </div>

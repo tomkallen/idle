@@ -1,7 +1,7 @@
 .ControlBar {
     display: flex;
     height: 3rem;
-    width: 52rem;
+    width: 48rem;
     background-color: var(--brown);
     border: 2px ridge var(--golden);
     margin: 0 auto;

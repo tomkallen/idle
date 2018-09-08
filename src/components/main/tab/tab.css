@@ -4,6 +4,7 @@
     height: 2.5rem;
     background-color: #451a0b;
     border: 2px ridge var(--golden);
+    border-radius: 6px 6px 0 0;
     border-bottom: 0;
     text-align: center;
     line-height: 2.5rem;

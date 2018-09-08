@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import BuildingPanel from '../buildings/BuildingPanel/BuildingPanel'
-import ControlButton from '../common/controls/ControlButton/ControlButton'
 import ResourceTab from '../resourcetab/resourcetab'
 import ServicePanel from '../services/ServicePanel/ServicePanel'
 import { observer, inject } from 'mobx-react'

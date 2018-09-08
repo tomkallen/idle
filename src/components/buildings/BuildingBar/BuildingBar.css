@@ -61,3 +61,9 @@
     margin-left: .5rem;
     color: #fff;
 }
+
+.itembar-title-name {
+    display: inline-block;
+    text-decoration: underline;
+    padding-bottom: .25rem;
+}

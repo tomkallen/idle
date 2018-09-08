@@ -1,7 +1,6 @@
-.itempanel {
+.Panel {
     width: 24rem;
     border: 2px ridge var(--golden);
     padding: .25rem;
     box-shadow: 0 0 2px #000;
 }
-

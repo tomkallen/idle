@@ -34,7 +34,7 @@ class Store {
       price: 150,
       currency: 'gold',
       priceModifier: 1.08,
-      level: 1,
+      level: 0,
       maxLevel: 25,
       capacity: 3,
       type: 'peasants',
@@ -267,7 +267,7 @@ function getPrice () {
 }
 
 function getSpeed () {
-  return Number((this.speed * 5).toFixed(2)) * this.level
+  return Number((this.speed * 5 * this.level).toFixed(2))
 }
 
 function getCapacity () {

@@ -12,6 +12,11 @@
     min-height: 6.5rem;
 }
 
+.servicebar h3 {
+    text-decoration: underline;
+    padding-bottom: .25rem;
+}
+
 .servicebar h3, .servicebar h5 {
     font-weight: normal;
 }
@@ -40,7 +45,7 @@
     background: #00630b;
     padding: .25rem .5rem;
     outline: none;
-
+    border-radius: 4px;
 }
 
 .servicebar-bottom button:hover {

@@ -7,7 +7,7 @@ import { observer, inject } from 'mobx-react'
 class ServiceBar extends Component {
 
   render () {
-    const {level, name, description, capacity, type, maxLevel, currency, index} = this.props.service
+    const {level, name, description, maxLevel, currency, index} = this.props.service
     const price = this.props.service.getPrice()
     const enabled = price <= this.props.store.resources.gold
 

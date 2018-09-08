@@ -1,5 +1,5 @@
 import React from 'react'
-import './panelheader.css'
+import './PanelHeader.css'
 
 const PanelHeader = ({children, closeButton, onClick}) =>
   <div className={'panelheader'}>

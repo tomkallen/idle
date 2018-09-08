@@ -23,11 +23,14 @@ class AchiTab extends Component {
     return <div
       onClick={() => this.clearAchiTab()}
       className={'achitab'}>
-      <p>{this.props.store.currentAchievement.name}</p>
+      <p>
+        {this.props.store.currentAchievement.name}
+        <span className={'achilabel'}>{this.props.store.currentAchievement.score}</span>
+      </p>
       <div className={'achitab-text'}>
         {this.props.store.currentAchievement.info}
       </div>
-      <span className={'achilabel'}>{this.props.store.currentAchievement.score}</span>
+
     </div>
   }
 }

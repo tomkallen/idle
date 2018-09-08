@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './resourcetab.css'
 import { observer, inject } from 'mobx-react'
-import Currency from '../common/currency/currency'
+import Currency from '../common/Currency/Currency'
 import store from '../../store'
 
 @inject('store')

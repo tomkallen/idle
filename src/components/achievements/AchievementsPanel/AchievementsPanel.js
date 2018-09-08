@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './AchievementsPanel.css'
 import { achievements } from '../../../achievements'
-import PanelHeader from '../../main/panelheader/panelheader'
+import PanelHeader from '../../common/PanelHeader/PanelHeader'
 import AchievementInfo from '../AchievementInfo/AchievementInfo'
 import AchievementCategory from '../AchievementCategory/AchievementCategory'
 import AchievementItem from '../AchievementItem/AchievementItem'
@@ -19,14 +19,14 @@ export default class AchievementsPanel extends Component {
     .map(category =>
       <AchievementCategory onClick={() => this.setState({category})} category={category}/>)
 
-  renderList = () => {
-    return this.props.store.achievements
+  renderList = () =>
+    this.props.store.achievements
       .filter(achievement => achievement.category === this.state.category)
       .sort((a, b) => b.active - a.active)
       .map(achievement => <AchievementItem achievement={achievement}/>)
-  }
 
   currentScore = () => this.props.store.achievements.reduce((sum, achi) => achi.active ? sum + achi.score : sum, 0)
+
   maxScore = () => this.props.store.achievements.reduce((sum, achi) => sum + achi.score, 0)
 
   render () {
