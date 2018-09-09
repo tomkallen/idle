@@ -1,0 +1,95 @@
+import { getPrice, getCapacity, getId } from './utils'
+
+export default [
+  {
+    index: getId(),
+    name: 'Peasant Hut',
+    description: 'This is a very basic hut for your common folk. It is not that spacey.',
+    price: 150,
+    currency: 'gold',
+    priceModifier: 1.08,
+    level: 0,
+    maxLevel: 25,
+    capacity: 3,
+    type: 'peasants',
+    tab: 'housing',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  },
+  {
+    index: getId(),
+    name: 'Barn',
+    description: 'This is where your wheat is stored',
+    price: 100,
+    currency: 'gold',
+    priceModifier: 1.08,
+    level: 1,
+    maxLevel: 30,
+    capacity: 500,
+    type: 'wheat',
+    tab: 'store',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  },
+
+  {
+    index: getId(),
+    name: 'Warehouse',
+    description: 'Used to store the stone blocks',
+    price: 200,
+    currency: 'gold',
+    priceModifier: 1.1,
+    level: 1,
+    maxLevel: 30,
+    capacity: 300,
+    type: 'stone',
+    tab: 'store',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  },
+  {
+    index: getId(),
+    name: 'Stables',
+    description: 'Where your horses live',
+    price: 1000,
+    currency: 'gold',
+    priceModifier: 1.1,
+    level: 1,
+    maxLevel: 30,
+    capacity: 25,
+    type: 'horses',
+    tab: 'store',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  },
+  {
+    index: getId(),
+    name: 'Cow Shed',
+    description: 'A place for your cattle',
+    price: 165,
+    currency: 'gold',
+    priceModifier: 1.08,
+    level: 1,
+    maxLevel: 30,
+    capacity: 30,
+    type: 'cattle',
+    tab: 'store',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  },
+  {
+    index: getId(),
+    name: 'Craft Store',
+    description: 'Keep hides here',
+    price: 195,
+    currency: 'gold',
+    priceModifier: 1.08,
+    level: 1,
+    maxLevel: 30,
+    capacity: 60,
+    type: 'leather',
+    tab: 'store',
+    getPrice: getPrice,
+    getCapacity: getCapacity
+  }
+]

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './AchievementsPanel.css'
-import { achievements } from '../../../achievements'
+import { achievements } from '../../../resources/store/achievements'
 import PanelHeader from '../../common/PanelHeader/PanelHeader'
 import AchievementInfo from '../AchievementInfo/AchievementInfo'
 import AchievementCategory from '../AchievementCategory/AchievementCategory'
@@ -17,7 +17,11 @@ export default class AchievementsPanel extends Component {
 
   renderCategories = () => [...new Set(this.props.store.achievements.map(achievement => achievement.category))]
     .map(category =>
-      <AchievementCategory onClick={() => this.setState({category})} category={category}/>)
+      <AchievementCategory
+        onClick={() => this.setState({category})}
+        category={category}
+        key={category}
+      />)
 
   renderList = () =>
     this.props.store.achievements

@@ -1,0 +1,7 @@
+.BurgerPanel {
+    width: 100%;
+    border: var(--border);
+    padding: .25rem;
+    background-color: var(--brown);
+
+}

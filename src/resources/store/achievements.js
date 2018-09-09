@@ -1,6 +1,6 @@
-import store from './store'
+import store from '../../store'
 
-export const achievements = [
+export default [
   {
     id: 1001,
     name: 'My First Crop',

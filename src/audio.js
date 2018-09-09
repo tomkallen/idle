@@ -1,5 +1,5 @@
-const click = require('./resources/click_01.wav')
-const achi = require('./resources/achi.mp3')
+const click = require('./resources/sounds/click.wav')
+const achi = require('./resources/sounds/achi.mp3')
 
 const sounds = {}
 

@@ -25,7 +25,7 @@ class BuildingBar extends Component {
             </div>
           </div>
           <div className="itembar-body-footer">
-            <div className={'itembar-body-footer-produces'}>+{building.getSpeed()} {building.produces} / sec</div>
+            <div className={'itembar-body-footer-produces'}>+{building.getSpeed()} {building.produces}</div>
           </div>
         </div>
         <button
