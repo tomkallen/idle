@@ -1,11 +1,10 @@
 .ControlBar {
     display: flex;
-    height: 3rem;
-    width: 48rem;
+    width: 3.25rem;
     background-color: var(--brown);
     border: 2px ridge var(--golden);
-    margin: 0 auto;
-    align-items: center;
-    flex-direction: row;
-    padding: 0 .25rem;
+    margin: 0 .25rem;
+    flex-direction: column;
+    padding: .25rem;
+    order: 10;
 }

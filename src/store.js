@@ -1,6 +1,6 @@
-import { observable, computed, action } from 'mobx'
+import { observable, action } from 'mobx'
 import sounds from './audio'
-import burgers from './resources/store/burghers'
+import burghers from './resources/store/burghers'
 import { achievements, buildings, resources, services } from './resources/store'
 
 class Store {
@@ -12,7 +12,7 @@ class Store {
   @observable display = null
 
   @observable achievements = achievements
-  @observable burgers = burgers
+  @observable burghers = burghers
   @observable services = services
   @observable buildings = buildings
   @observable resources = resources

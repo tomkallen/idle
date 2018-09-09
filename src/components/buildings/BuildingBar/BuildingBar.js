@@ -3,6 +3,7 @@ import './BuildingBar.css'
 import Currency from '../../common/Currency/Currency'
 import { observer, inject } from 'mobx-react'
 import store from '../../../store'
+import Button from "../../common/controls/Button/Button"
 
 @inject('store')
 @observer
@@ -28,12 +29,13 @@ class BuildingBar extends Component {
             <div className={'itembar-body-footer-produces'}>+{building.getSpeed()} {building.produces}</div>
           </div>
         </div>
-        <button
+        <Button
           onClick={() => enabled && this.levelUp()}
-          className={enabled ? 'buy-button' : 'buy-button disabled'}>
+          enabled={enabled}
+        >
           <Currency currency={building.currency}/>
           {price}
-        </button>
+        </Button>
       </div>)
   }
 }

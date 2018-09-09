@@ -12,7 +12,12 @@
 .BurgerItem .cell {
     width: calc((100% - 32px) / 2);
     padding: .25rem .5rem;
-    font-size: .85rem;
+    font-size: .75rem;
+}
+
+.BurgerItem .cell.resources {
+    display: flex;
+    align-items: center;
 }
 
 .BurgerItem-title span {
@@ -25,4 +30,19 @@
 .BurgerItem-resources {
     display: inline-block;
     padding: 0 .5rem;
+    min-width: 7rem;
+}
+.BurgerItem .action {
+    flex: 1 1 120px;
+    margin-left: auto;
+    align-self: center;
+    text-align: right;
+}
+
+.BurgerItem .button {
+    border: var(--border);
+    background: #00630b;
+    padding: .25rem .5rem;
+    outline: none;
+    border-radius: 4px;
 }

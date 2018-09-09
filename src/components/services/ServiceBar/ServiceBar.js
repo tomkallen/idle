@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './ServiceBar.css'
 import { observer, inject } from 'mobx-react'
+import Button from '../../common/controls/Button/Button'
 
 @inject('store')
 @observer
@@ -22,7 +23,10 @@ class ServiceBar extends Component {
         <p>price: <span>{price} {currency}</span></p>
       </div>
       <div className={'servicebar-bottom'}>
-        {enabled && <button onClick={() => this.props.store.upgrade(index)}>Upgrade</button>}
+        <Button
+          onClick={() => this.props.store.upgrade(index)}
+          enabled={enabled}
+        >Upgrade</Button>
       </div>
     </div>
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BuildingPanel from '../buildings/BuildingPanel/BuildingPanel'
-import BurgerPanel from '../burgers/BurgherPanel/BurgerPanel'
+import BurgherPanel from '../burghers/BurgherPanel/BurgherPanel'
 import ResourceTab from '../resourcetab/resourcetab'
 import ServicePanel from '../services/ServicePanel/ServicePanel'
 import { observer, inject } from 'mobx-react'
@@ -19,7 +19,7 @@ export default class Main extends Component {
 
   render () {
     return (
-      <div>
+      <div className={'main-wrapper'}>
         <ControlBar/>
         <div className={'main'}>
           <AchievementsPanel/>
@@ -30,7 +30,7 @@ export default class Main extends Component {
           />
           <ServicePanel/>
           {this.props.store.currentAchievement ? <AchiTab/> : null}
-          <BurgerPanel/>
+          <BurgherPanel/>
         </div>
       </div>
     )
