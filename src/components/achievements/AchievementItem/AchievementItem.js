@@ -1,15 +1,15 @@
 import React from 'react'
 import './AchievementItem.css'
 
-const AchievementItem = ({achievement}) =>
+const AchievementItem = ({ achievement }) =>
   <div className={'AchievementItem'}>
     <div className={achievement.active ? 'name' : 'name disabled'}>
       {achievement.name}
       {achievement.active && <span className={'score'}>{achievement.score}</span>}
     </div>
-    {achievement.active && <div>
+    <div>
       <div className={'info'}>{achievement.info}</div>
-    </div>}
+    </div>
   </div>
 
 export default AchievementItem

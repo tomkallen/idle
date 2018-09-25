@@ -1,6 +1,10 @@
 .AchievementInfo {
-
+    text-align: center;
     height:  3rem;
     background-color: var(--brown);
     border: 2px ridge var(--golden);
+    line-height: 3rem;
+}
+.AchievementInfo span {
+    color: var(--golden);
 }

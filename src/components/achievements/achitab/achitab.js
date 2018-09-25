@@ -9,12 +9,10 @@ class AchiTab extends Component {
   timeout = null
 
   componentDidMount () {
-    console.log(sounds)
     sounds.achi.playing && sounds.achi.stop()
     sounds.achi.play()
     clearInterval(this.timeout)
     this.timeout = setTimeout(this.clearAchiTab, 8000)
-
   }
 
   clearAchiTab = () => this.props.store.updateStore('currentAchievement', null)

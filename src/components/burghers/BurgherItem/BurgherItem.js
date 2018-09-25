@@ -5,17 +5,15 @@ import ui from '../../../resources/ui/ui'
 import Button from '../../common/controls/Button/Button'
 
 class BurgherItem extends Component {
-
-  getResources = (type) => {
-    return this.props.burgher[type].map(res => <span>{res.amount} {res.type}</span>)
-  }
+  getResources = (type) =>
+    this.props.burgher[type].map(res => <span>{res.amount} {res.type}</span>)
 
   render () {
-    const {burgher} = this.props
+    const { burgher } = this.props
 
     return <div className={'BurgerItem'}>
       <div className={'image'}>
-        <img src={burgher.image}/>
+        <img src={burgher.image} alt='' />
       </div>
       <div className={'cell'}>
         <div className={'BurgerItem-title'}><span>{burgher.name}</span></div>
@@ -23,10 +21,10 @@ class BurgherItem extends Component {
       </div>
       <div className={'cell resources'}>
         <div className={'BurgerItem-resources'}>
-          <img src={ui.arrowDown}/> {this.getResources('consumes')}
+          <img src={ui.arrowDown} alt='' /> {this.getResources('consumes')}
         </div>
         <div className={'BurgerItem-resources'}>
-          <img src={ui.arrowUp}/> {this.getResources('produces')}
+          <img src={ui.arrowUp} alt='' /> {this.getResources('produces')}
         </div>
       </div>
       <div className={'cell action'}>

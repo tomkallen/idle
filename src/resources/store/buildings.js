@@ -1,4 +1,4 @@
-import {getPrice, getSpeed, getId} from './utils'
+import { getPrice, getSpeed, getId } from './utils'
 
 export default [
   {
@@ -45,7 +45,7 @@ export default [
     index: getId(),
     name: 'Cattle Farm',
     produces: 'cattle',
-    speed: .5,
+    speed: 0.5,
     price: 300,
     currency: 'gold',
     priceModifier: 1.13,
@@ -58,7 +58,7 @@ export default [
     index: getId(),
     name: 'Hunter Log',
     produces: 'leather',
-    speed: .33,
+    speed: 0.33,
     price: 370,
     currency: 'gold',
     priceModifier: 1.13,

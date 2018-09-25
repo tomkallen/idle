@@ -9,13 +9,13 @@ export default [
     description: 'Just a common folk. Can work, can fight, can pay taxes.',
     image: images.commoner,
     consumes: [
-      {type: 'wheat', amount: 1.75}
+      { type: 'wheat', amount: 1.75 }
     ],
-    produces: [{type: 'gold', amount: 1}],
+    produces: [{ type: 'gold', amount: 1 }],
     combatant: true,
     hp: 100,
     damage: 5,
-    critical: .05
+    critical: 0.05
   },
   {
     id: getId(),
@@ -24,9 +24,9 @@ export default [
     description: 'Been to school. Can read, write and knows where the church is. Spends all their time reading or collecting taxes so can not fight.',
     image: images.educated,
     consumes: [
-      {type: 'wheat', amount: 2.25}
+      { type: 'wheat', amount: 2.25 }
     ],
-    produces: [{type: 'gold', amount: 1.25}],
+    produces: [{ type: 'gold', amount: 1.25 }],
     combatant: false
   },
   {
@@ -36,9 +36,24 @@ export default [
     description: 'Educated burgher that read just one book. Does not fight but can bless others to do so.',
     image: images.cleric,
     consumes: [
-      {type: 'wheat', amount: 3.5}
+      { type: 'wheat', amount: 3.5 }
     ],
-    produces: [{type: 'gold', amount: 2.15}],
+    produces: [{ type: 'gold', amount: 2.15 }],
     combatant: false
+  },
+  {
+    id: getId(),
+    count: 0,
+    name: 'Militia',
+    description: 'Just a common folk who got that shiny uniform for free.',
+    image: images.militia,
+    consumes: [
+      { type: 'wheat', amount: 5 }
+    ],
+    produces: [],
+    combatant: true,
+    hp: 150,
+    damage: 8,
+    critical: 0.1
   }
 ]

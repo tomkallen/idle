@@ -5,7 +5,6 @@
 }
 
 .currency img {
-    width: 1rem;
-    height: 1rem;
+    width: 16px;
     vertical-align: bottom;
 }

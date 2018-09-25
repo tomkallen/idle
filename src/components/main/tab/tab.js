@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './tab.css'
 
 export default class Tab extends Component {
-
   getClass = () => {
     if (this.props.active) return 'tab active'
     if (this.props.disabled) return 'tab disabled'

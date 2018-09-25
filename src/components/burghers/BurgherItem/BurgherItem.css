@@ -1,6 +1,7 @@
 .BurgerItem {
     display: flex;
     border: var(--border);
+    background-color: var(--brown);
 }
 
 .BurgerItem .image {

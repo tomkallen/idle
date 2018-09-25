@@ -4,7 +4,6 @@ import burghers from './resources/store/burghers'
 import { achievements, buildings, resources, services } from './resources/store'
 
 class Store {
-
   static updateInterval = 3 // sec
 
   @observable achievementScore = 0

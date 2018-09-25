@@ -8,7 +8,6 @@ import { Scrollbars } from 'react-custom-scrollbars'
 
 @observer
 class BuildingPanel extends Component {
-
   renderBars = () =>
     this.props.buildings.map(building =>
       <BuildingBar
@@ -18,17 +17,16 @@ class BuildingPanel extends Component {
       />)
 
   render () {
-
     return (
       <Panel header={'Production'}>
-        <div className="tab-holder">
+        <div className='tab-holder'>
           <Tab active>I</Tab>
           <Tab disabled>II</Tab>
           <Tab disabled>III</Tab>
           <Tab disabled>IV</Tab>
         </div>
         <Scrollbars
-          style={{width: '100%', height: 300, borderBottom: '1px solid var(--golden)'}}>{this.renderBars()}</Scrollbars>
+          style={{ width: '100%', height: 300, borderBottom: '1px solid var(--golden)' }}>{this.renderBars()}</Scrollbars>
       </Panel>
     )
   }

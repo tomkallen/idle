@@ -11,11 +11,11 @@
 
 .AchievementsPanel .wrapper {
     align-self: center;
-    width: 50rem;
+    width: 51.75rem;
     margin: auto;
     height: 40rem;
     background-color: #200f08;
-    border: 4px ridge var(--golden);
+    border: var(--border);
 }
 
 .AchievementsPanel .body {

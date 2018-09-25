@@ -34,6 +34,10 @@
     font-size: .85rem;
 }
 
+.servicebar-right img {
+    vertical-align: middle;
+}
+
 .servicebar-bottom {
     display: flex;
     flex: 1 1 auto;

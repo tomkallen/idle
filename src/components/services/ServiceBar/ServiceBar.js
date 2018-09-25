@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import './ServiceBar.css'
 import { observer, inject } from 'mobx-react'
 import Button from '../../common/controls/Button/Button'
+import images from '../../../resources/ui/ui'
 
 @inject('store')
 @observer
 class ServiceBar extends Component {
-
   render () {
-    const {level, name, description, maxLevel, currency, index} = this.props.service
+    const { level, name, description, maxLevel, currency, index } = this.props.service
     const price = this.props.service.getPrice()
     const enabled = price <= this.props.store.resources.gold
 
@@ -20,7 +20,7 @@ class ServiceBar extends Component {
       <div className={'servicebar-right'}>
         <p>capacity: <span>{this.props.service.getCapacity()}</span></p>
         <p>level: <span>{level} / {maxLevel}</span></p>
-        <p>price: <span>{price} {currency}</span></p>
+        <p><img width='16px' src={images[currency]} alt='' /><span>{price}</span></p>
       </div>
       <div className={'servicebar-bottom'}>
         <Button

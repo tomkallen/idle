@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import './ControlBar.css'
 import ControlButton from '../ControlButton/ControlButton'
-import store from '../../../../store'
+// import store from '../../../../store' // eslint-disable-line no-unused-vars
 
 @inject('store')
 @observer

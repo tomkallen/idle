@@ -8,9 +8,9 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <div className="App">
-          <div className={"top"}/>
-          <Main/>
+        <div className='App'>
+          <div className={'top'} />
+          <Main />
         </div>
       </Provider>
     )
